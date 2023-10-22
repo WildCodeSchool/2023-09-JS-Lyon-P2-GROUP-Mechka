@@ -54,3 +54,19 @@ code {
 button {
   font-size: calc(10px + 2vmin);
 }
+
+/* MY CSS */
+
+.mb-3 {
+  margin-top : 30px;
+}
+
+.container {
+  margin-top: 40px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
