@@ -64,12 +64,12 @@ function App() {
 
     // Get request for new releases
 
-    // const newReleases = await fetch ("https://api.spotify.com/v1/browse/new-releases", searchParameters)
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     console.log(data);
-    //     setNewReleases(data.items);
-    //   });
+    const newReleases = await fetch ("https://api.spotify.com/v1/browse/new-releases", searchParameters)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        setNewReleases(data.items);
+      });
 
   }
 
