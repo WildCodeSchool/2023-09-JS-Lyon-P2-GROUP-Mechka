@@ -3,39 +3,44 @@ import { useAuth } from "../../contexts/AuthContext";
 
 export default function CarrouselContainer() {
   const token = useAuth();
-  const [newReleases, setNewReleases] = useState(null);
-
-  const url = "https://api.spotify.com/v1/browse/new-releases";
-
-  const handleFetchData = async () => {
-    try {
-      const params = {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      };
-      const response = await fetch(url, params);
-      const data = await response.json();
-      setNewReleases(data.albums.items);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  const [newReleases, setNewReleases] = useState([]);
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const url = "https://api.spotify.com/v1/browse/new-releases";
+        const response = await fetch(url, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error(
+            "Erreur lors de la récupération des nouvelles sorties"
+          );
+        }
+
+        const data = await response.json();
+        setNewReleases(data.albums.items);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
     if (token !== null) {
-      handleFetchData();
-      // fetch(url, params)
-      //   .then((response) => response.json())
-      //   .then((data) => setNewReleases(data.albums.items));
+      fetchData();
     }
   }, [token]);
 
   return (
     <div>
-      {newReleases.map((element) => {
-        return <div key={element.name}>{element.name}</div>;
-      })}
+      {newReleases.map((release) => (
+        <div key={release.id}>
+          {release.name}
+          <img width="20%" src={release.images[0].url} alt="cover album" />
+        </div>
+      ))}
     </div>
   );
 }
