@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 
-export default function CarrouselContainer() {
+export default async function CarrouselContainer() {
   const token = useAuth();
-  const [newReleases, setNewReleases] = useState([]);
+  const [newReleases, setNewReleases] = useState(null);
 
   useEffect(() => {
     if (token !== null) {
       const params = {
+        method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -17,7 +18,7 @@ export default function CarrouselContainer() {
 
       fetch(url, params)
         .then((response) => response.json())
-        .then((data) => setNewReleases(data));
+        .then((data) => setNewReleases(data.albums.items));
     }
   }, [token]);
 
