@@ -6,20 +6,41 @@ export default function CarrouselContainer() {
   const [newReleases, setNewReleases] = useState([]);
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const url = "https://api.spotify.com/v1/browse/new-releases";
+        const response = await fetch(url, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error(
+            "Erreur lors de la récupération des nouvelles sorties"
+          );
+        }
+
+        const data = await response.json();
+        setNewReleases(data.albums.items);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
     if (token !== null) {
-      const params = {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      };
-
-      const url = "https://api.spotify.com/v1/browse/new-releases";
-
-      fetch(url, params)
-        .then((response) => response.json())
-        .then((data) => setNewReleases(data));
+      fetchData();
     }
   }, [token]);
 
-  return <div>{JSON.stringify(newReleases)}</div>;
+  return (
+    <div>
+      {newReleases.map((release) => (
+        <div key={release.id}>
+          {release.name}
+          <img width="20%" src={release.images[0].url} alt="cover album" />
+        </div>
+      ))}
+    </div>
+  );
 }
