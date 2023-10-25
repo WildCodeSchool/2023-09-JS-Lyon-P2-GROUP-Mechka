@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 
-export default async function CarrouselContainer() {
+export default function CarrouselContainer() {
   const token = useAuth();
-  const [newReleases, setNewReleases] = useState(null);
+  const [newReleases, setNewReleases] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
