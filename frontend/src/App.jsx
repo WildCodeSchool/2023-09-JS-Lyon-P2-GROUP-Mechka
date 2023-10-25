@@ -1,11 +1,10 @@
-import { useAuth } from "./contexts/AuthContext";
 import "./App.css";
+import CarrouselContainer from "./components/carrouselMain/CarrouselContainer";
 
 function App() {
-  const data = useAuth();
   return (
     <div>
-      <p>{data}</p>
+      <CarrouselContainer />
     </div>
   );
 }
