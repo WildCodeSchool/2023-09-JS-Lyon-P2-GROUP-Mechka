@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+}
+
+.navBar {
+  background-color: #100f0f;
+  border: 1px solid black;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navBar img {
+  margin-top: 0.2vh;
+  margin-bottom: 1vh;
+  height: 4vh;
+  width: 4vh;
+}
+
+.home,
+.search,
+.favoris,
+.switch {
+  margin: 1vh;
+  justify-content: center;
+  text-align: center;
+}
