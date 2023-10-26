@@ -1,12 +1,14 @@
 import "./App.css";
-// import CarrouselContainer from "./components/carrouselMain/CarrouselContainer";
 import NavBar from "./components/navBar/NavBar";
+import CarrouselContainer from "./components/carrouselMain/CarrouselContainer";
+import Header from "./components/header/Header";
 
 function App() {
   return (
     <div>
-      {/* <CarrouselContainer /> */}
       <NavBar />
+      <Header />
+      <CarrouselContainer />
     </div>
   );
 }

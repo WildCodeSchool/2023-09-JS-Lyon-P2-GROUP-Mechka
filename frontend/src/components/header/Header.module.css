@@ -1,0 +1,17 @@
+.logo {
+  width: 5rem;
+  height: 5rem;
+}
+
+.icon_log_in {
+  width: 4rem;
+  height: 4rem;
+}
+
+.nav_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #100f0fd8;
+}
