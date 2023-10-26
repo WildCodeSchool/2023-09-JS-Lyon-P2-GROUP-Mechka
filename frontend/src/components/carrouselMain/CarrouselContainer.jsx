@@ -5,7 +5,7 @@ import styles from "./CarrouselContainer.module.css";
 
 export default function CarrouselContainer() {
   const token = useAuth();
-  const [newReleases, setNewReleases] = useState([]);
+  const [newReleases, setNewReleases] = useState(null);
 
   useEffect(() => {
     if (!token) return;
