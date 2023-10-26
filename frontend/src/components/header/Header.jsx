@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import styles from "./Header.module.css";
 
@@ -5,16 +6,20 @@ function Header() {
   return (
     <div>
       <nav className={styles.nav_header}>
-        <img
-          className={styles.logo}
-          src="/src/assets/images/Logo-Mechka.svg"
-          alt="Logo Mechka"
-        />
-        <img
-          className={styles.icon_log_in}
-          src="/src/assets/images/icon-log-in.png"
-          alt="icon connexion"
-        />
+        <Link to="/">
+          <img
+            className={styles.logo}
+            src="/src/assets/images/Logo-Mechka.svg"
+            alt="Logo Mechka"
+          />
+        </Link>
+        <Link to="/profil">
+          <img
+            className={styles.icon_log_in}
+            src="/src/assets/images/icon-log-in.png"
+            alt="icon connexion"
+          />
+        </Link>
       </nav>
     </div>
   );

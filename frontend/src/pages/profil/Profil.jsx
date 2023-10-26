@@ -1,15 +1,15 @@
 import NavBar from "../../components/navBar/NavBar";
-import CarrouselContainer from "../../components/carrouselMain/CarrouselContainer";
 import Header from "../../components/header/Header";
+import styles from "./Profil.module.css";
 
-function Home() {
+function Profil() {
   return (
     <div>
       <NavBar />
       <Header />
-      <CarrouselContainer />
+      <h1 className={styles.titleH1}>Encore rien...</h1>
     </div>
   );
 }
 
-export default Home;
+export default Profil;

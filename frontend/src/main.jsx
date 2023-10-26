@@ -1,15 +1,32 @@
+import "./App.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import App from "./App";
 import { AuthProvider } from "./contexts/AuthContext";
+
+import Home from "./pages/home/Home";
+import List from "./pages/list/List";
+import Favorite from "./pages/favorite/Favorite";
+import Profil from "./pages/profil/Profil";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
+  },
+  {
+    path: "/list",
+    element: <List />,
+  },
+  {
+    path: "/favorite",
+    element: <Favorite />,
+  },
+  {
+    path: "/profil",
+    element: <Profil />,
   },
 ]);
 
