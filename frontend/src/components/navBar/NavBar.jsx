@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import whiteHome from "../../assets/images/whiteHome.png";
 import whiteSearch from "../../assets/images/whiteSearch.png";
@@ -8,17 +9,23 @@ function navBar() {
   return (
     <div className={styles.navBar}>
       <div className={styles.home}>
-        <img src={whiteHome} alt="white hearth" />
+        <Link to="/">
+          <img src={whiteHome} alt="white hearth" />
+        </Link>
         <p>Home</p>
       </div>
 
       <div className={styles.search}>
-        <img src={whiteSearch} alt="White Search" />
+        <Link to="/list">
+          <img src={whiteSearch} alt="White Search" />
+        </Link>
         <p>Search</p>
       </div>
 
       <div className={styles.favoris}>
-        <img src={whiteFav} alt="White Favoris" />
+        <Link to="/favorite">
+          <img src={whiteFav} alt="White Favoris" />
+        </Link>
         <p>Favoris</p>
       </div>
 

@@ -1,15 +1,15 @@
 import NavBar from "../../components/navBar/NavBar";
-import CarrouselContainer from "../../components/carrouselMain/CarrouselContainer";
 import Header from "../../components/header/Header";
+import styles from "./Favorite.module.css";
 
-function Home() {
+function Favorite() {
   return (
     <div>
       <NavBar />
       <Header />
-      <CarrouselContainer />
+      <h1 className={styles.titleH1}>Toujours rien...</h1>
     </div>
   );
 }
 
-export default Home;
+export default Favorite;
