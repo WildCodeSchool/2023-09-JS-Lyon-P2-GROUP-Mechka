@@ -1,46 +1,38 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
+import CarrouselCart from "./CarrouselCart";
+import styles from "./CarrouselContainer.module.css";
 
 export default function CarrouselContainer() {
   const token = useAuth();
   const [newReleases, setNewReleases] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const url = "https://api.spotify.com/v1/browse/new-releases";
-        const response = await fetch(url, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+    if (!token) return;
 
-        if (!response.ok) {
-          throw new Error(
-            "Erreur lors de la récupération des nouvelles sorties"
-          );
-        }
-
-        const data = await response.json();
-        setNewReleases(data.albums.items);
-      } catch (error) {
-        console.error(error);
-      }
+    const urlRelease = "https://api.spotify.com/v1/browse/new-releases";
+    const params = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     };
 
-    if (token !== null) {
-      fetchData();
-    }
+    fetch(urlRelease, params)
+      .then((response) => response.json())
+      .then((data) => setNewReleases(data.albums.items));
   }, [token]);
 
   return (
-    <div>
-      {newReleases.map((release) => (
-        <div key={release.id}>
-          {release.name}
-          <img width="20%" src={release.images[0].url} alt="cover album" />
-        </div>
-      ))}
+    <div className={styles.container}>
+      <h2 className={styles.title}>New releases</h2>
+      <div className={styles.containerCarrousel}>
+        {!newReleases && <p className={styles.paraphLoading}>Loading...</p>}
+
+        {newReleases &&
+          newReleases.map((release) => (
+            <CarrouselCart key={release.id} img={release.images[0].url} />
+          ))}
+      </div>
     </div>
   );
 }
