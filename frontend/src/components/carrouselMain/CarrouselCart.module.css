@@ -1,0 +1,17 @@
+.containerImg {
+  width: 10rem;
+  height: 10rem;
+  flex: 0 0 auto;
+}
+
+.image {
+  width: 100%;
+}
+
+@media screen and (width > 1024px) {
+  .containerImg {
+    width: 15rem;
+    height: 15rem;
+    flex: 0 0 auto;
+  }
+}
