@@ -13,5 +13,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #100f0fd8;
+  background-color: #100f0f;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
