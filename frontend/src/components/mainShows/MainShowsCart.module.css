@@ -1,0 +1,18 @@
+.containerImgShows {
+  width: 15rem;
+  height: 15rem;
+  flex: 0 0 auto;
+}
+
+.imageShows {
+  width: 100%;
+  border-radius: 1.5rem;
+}
+
+@media screen and (width > 1024px) {
+  .containerImg {
+    width: 15rem;
+    height: 15rem;
+    flex: 0 0 auto;
+  }
+}

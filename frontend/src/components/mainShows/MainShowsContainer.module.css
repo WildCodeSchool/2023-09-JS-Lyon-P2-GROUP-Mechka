@@ -1,0 +1,28 @@
+.container {
+  margin-left: 1rem;
+  margin-top: 3rem;
+}
+
+.cardPosition {
+  display: flex;
+  width: 100vw;
+  gap: 1.5rem;
+  overflow-x: auto;
+}
+
+.title {
+  color: white;
+  margin: 1.5rem 0;
+}
+
+.containerSlider {
+  display: flex;
+  width: 100%;
+
+  overflow: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.containerSlider::-webkit-scrollbar {
+  display: none;
+}
