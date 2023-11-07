@@ -2,6 +2,7 @@
   width: 10rem;
   height: 10rem;
   flex: 0 0 auto;
+  border-radius: 1.5rem;
 }
 
 .image {
@@ -13,5 +14,6 @@
     width: 15rem;
     height: 15rem;
     flex: 0 0 auto;
+    scrollbar-width: thin;
   }
 }
