@@ -8,7 +8,7 @@ export default function AlbumMain({ img, albumName, artist, releaseDate }) {
         <img src={img} alt="Album Cover" />
       </div>
       <div className={style.infoAlbum}>
-        <p className={style.artistName}>{albumName}</p>
+        <p className={style.albumName}>{albumName}</p>
         <p className={style.artistName}>{artist}</p>
         <p className={style.date}>Release Date: {releaseDate}</p>
       </div>
