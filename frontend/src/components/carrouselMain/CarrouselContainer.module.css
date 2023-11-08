@@ -28,10 +28,14 @@
 
 @media screen and (width > 1024px) {
   .title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .paraphLoading {
     font-size: 4rem;
+  }
+
+  .containerCarrousel {
+    margin-bottom: 3rem;
   }
 }

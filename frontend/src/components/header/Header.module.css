@@ -4,8 +4,10 @@
 }
 
 .icon_log_in {
-  width: 4rem;
-  height: 4rem;
+  margin-right: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: white;
 }
 
 .nav_header {
