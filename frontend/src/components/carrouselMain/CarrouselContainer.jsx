@@ -26,8 +26,6 @@ export default function CarrouselContainer() {
     <div className={styles.container}>
       <h2 className={styles.title}>New releases</h2>
       <div className={styles.containerCarrousel}>
-        {!newReleases && <p className={styles.paraphLoading}>Loading...</p>}
-
         {newReleases &&
           newReleases.map((release) => (
             <CarrouselCart

@@ -26,8 +26,8 @@ export default function ArtistsList() {
     <div className={styles.albumCovers}>
       {artists &&
         artists.map((artist) => (
-          <div className={styles.albumCard}>
-            <img key={artist.id} src={artist.images[0].url} alt="Artists" />
+          <div key={artist.id} className={styles.albumCard}>
+            <img src={artist.images[0].url} alt="Artists" />
             <p className={styles.p}>{artist.name}</p>
           </div>
         ))}
