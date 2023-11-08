@@ -8,6 +8,9 @@
   width: 100vw;
   gap: 1.5rem;
   overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
 }
 
 .title {
@@ -18,11 +21,7 @@
 .containerSlider {
   display: flex;
   width: 100%;
-
-  overflow: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
 }
-.containerSlider::-webkit-scrollbar {
+.cardPosition::-webkit-scrollbar {
   display: none;
 }
