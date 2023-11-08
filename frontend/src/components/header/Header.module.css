@@ -18,3 +18,9 @@
   top: 0;
   width: 100%;
 }
+
+.titleH1 {
+  color: white;
+  letter-spacing: 0.25rem;
+  font-size: 2rem;
+}

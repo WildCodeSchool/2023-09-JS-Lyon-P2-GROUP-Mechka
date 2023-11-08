@@ -9,3 +9,7 @@
   background-color: #100f0f;
   font-family: "Lato", Arial, Helvetica, sans-serif;
 }
+
+html {
+  height: 100%;
+}
