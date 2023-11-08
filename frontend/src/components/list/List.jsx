@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import NavBar from "../navBar/NavBar";
@@ -67,11 +68,13 @@ export default function Search() {
         {albums.map((album) => {
           return (
             <div className={styles.albumCard} key={album.id}>
-              <img
-                className={styles.imageList}
-                src={album.images[0].url}
-                alt="Cover album"
-              />
+              <Link to={`/albums/${album.id}`}>
+                <img
+                  className={styles.imageList}
+                  src={album.images[0].url}
+                  alt="Cover album"
+                />
+              </Link>
               <p className={styles.p}>{album.name}</p>
             </div>
           );
