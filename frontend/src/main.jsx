@@ -7,10 +7,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 
 import Home from "./pages/home/Home";
-import List from "./pages/list/List";
 import Favorite from "./pages/favorite/Favorite";
 import Profil from "./pages/profil/Profil";
 import AlbumPage from "./pages/album/AlbumPage";
+import ListPage from "./pages/list/ListPage";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/list",
-    element: <List />,
+    element: <ListPage />,
   },
   {
     path: "/favorite",
