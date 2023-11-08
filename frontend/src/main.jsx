@@ -10,6 +10,7 @@ import Home from "./pages/home/Home";
 import List from "./pages/list/List";
 import Favorite from "./pages/favorite/Favorite";
 import Profil from "./pages/profil/Profil";
+import AlbumPage from "./pages/album/AlbumPage";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/profil",
     element: <Profil />,
+  },
+  {
+    path: "albums/:id",
+    element: <AlbumPage />,
   },
 ]);
 

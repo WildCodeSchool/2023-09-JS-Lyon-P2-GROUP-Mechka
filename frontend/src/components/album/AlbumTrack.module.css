@@ -1,0 +1,31 @@
+.svg {
+  fill: white;
+  width: 1rem;
+  height: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  font-size: 2rem;
+}
+
+@media screen and (width > 768px) {
+  li {
+    flex-direction: row;
+  }
+}

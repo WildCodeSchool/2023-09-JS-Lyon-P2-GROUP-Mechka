@@ -5,7 +5,7 @@ import whiteSearch from "../../assets/images/whiteSearch.png";
 import whiteFav from "../../assets/images/whiteFav.png";
 import whiteMoon from "../../assets/images/whiteMoon.png";
 
-function navBar() {
+function NavBar() {
   return (
     <div className={styles.navBar}>
       <div className={styles.home}>
@@ -37,4 +37,4 @@ function navBar() {
   );
 }
 
-export default navBar;
+export default NavBar;

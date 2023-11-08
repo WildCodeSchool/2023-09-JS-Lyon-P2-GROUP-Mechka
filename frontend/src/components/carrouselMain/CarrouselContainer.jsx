@@ -30,7 +30,13 @@ export default function CarrouselContainer() {
 
         {newReleases &&
           newReleases.map((release) => (
-            <CarrouselCart key={release.id} img={release.images[0].url} />
+            <CarrouselCart
+              key={release.id}
+              img={release.images[0].url}
+              nameAlbum={release.name}
+              nameArtist={release.artists[0].name}
+              id={release.id}
+            />
           ))}
       </div>
     </div>
