@@ -5,7 +5,7 @@ export default function ButtonRandom() {
   return (
     <div className={styles.buttonPosition}>
       <button type="button" id={styles["button-random"]}>
-        Surprise me !!
+        Surprise me
       </button>
     </div>
   );

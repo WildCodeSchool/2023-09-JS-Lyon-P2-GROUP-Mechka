@@ -13,6 +13,7 @@ function Header() {
             alt="Logo Mechka"
           />
         </Link>
+        <h1 className={styles.titleH1}>Mечка</h1>
         <Link to="/profil">
           <img
             className={styles.icon_log_in}

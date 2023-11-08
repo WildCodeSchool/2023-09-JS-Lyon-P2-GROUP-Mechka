@@ -15,3 +15,9 @@
   align-items: center;
   background-color: #100f0fd8;
 }
+
+.titleH1 {
+  color: white;
+  letter-spacing: 0.25rem;
+  font-size: 2rem;
+}
