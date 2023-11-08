@@ -61,6 +61,7 @@ input {
   justify-content: center;
   text-align: center;
   margin-bottom: 15vh;
+  color: transparent;
 }
 
 .albumCard {
