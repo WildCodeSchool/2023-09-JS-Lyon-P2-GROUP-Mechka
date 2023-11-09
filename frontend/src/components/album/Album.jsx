@@ -56,7 +56,6 @@ export default function Album() {
                     key={track.id}
                     nameTrack={track.name}
                     duration={track.duration_ms}
-                    artist={track.artists[0].name}
                     index={index + 1}
                   />
                 );
