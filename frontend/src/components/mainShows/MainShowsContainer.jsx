@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved
+// eslint-disable-next-line import/no-unresolved
 import { Carousel } from "react-responsive-3d-carousel";
 import { useAuth } from "../../contexts/AuthContext";
 import MainShowsCart from "./MainShowsCart";
