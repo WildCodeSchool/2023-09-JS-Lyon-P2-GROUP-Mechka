@@ -6,6 +6,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #100f0f;
   font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 0, 0) 0%,
+    rgb(64, 64, 64) 90.2%
+  );
 }

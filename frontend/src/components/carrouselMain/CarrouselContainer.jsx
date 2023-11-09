@@ -26,11 +26,15 @@ export default function CarrouselContainer() {
     <div className={styles.container}>
       <h2 className={styles.title}>New releases</h2>
       <div className={styles.containerCarrousel}>
-        {!newReleases && <p className={styles.paraphLoading}>Loading...</p>}
-
         {newReleases &&
           newReleases.map((release) => (
-            <CarrouselCart key={release.id} img={release.images[0].url} />
+            <CarrouselCart
+              key={release.id}
+              img={release.images[0].url}
+              nameAlbum={release.name}
+              nameArtist={release.artists[0].name}
+              id={release.id}
+            />
           ))}
       </div>
     </div>
