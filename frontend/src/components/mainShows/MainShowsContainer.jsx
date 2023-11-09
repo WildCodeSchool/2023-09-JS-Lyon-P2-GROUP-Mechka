@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+// eslint-disable-next-line import/no-unresolved
+import { Carousel } from "react-responsive-3d-carousel";
 import { useAuth } from "../../contexts/AuthContext";
 import MainShowsCart from "./MainShowsCart";
 import styles from "./MainShowsContainer.module.css";
@@ -29,10 +31,21 @@ export default function MainShowsContainer() {
       <div className={styles.containerSlider}>
         <div className={styles.cardPosition}>
           {!newShows && <p>Loading...</p>}
-          {newShows &&
-            newShows.map((shows) => (
-              <MainShowsCart key={shows.id} img={shows.images[0].url} />
-            ))}
+          <Carousel
+            className={styles.carouselDesktop}
+            width="20rem"
+            height="20rem"
+            spread="narrow"
+            interval={5000}
+            depth={3}
+            showStatus={false}
+            showArrows={false}
+          >
+            {newShows &&
+              newShows.map((shows) => (
+                <MainShowsCart key={shows.id} img={shows.images[0].url} />
+              ))}
+          </Carousel>
         </div>
       </div>
     </div>
