@@ -28,9 +28,8 @@ button {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  margin-top: 3vh;
+  margin-top: 8rem;
   margin-bottom: 4vh;
-  margin-top: 12vh;
 }
 
 input {

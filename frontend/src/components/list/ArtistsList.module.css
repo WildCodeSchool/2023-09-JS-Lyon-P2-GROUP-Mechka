@@ -2,7 +2,7 @@
   color: white;
   font-size: 10px;
   width: 15vh;
-  margin-top: 1vh;
+  padding-top: 1vh;
   font-size: 13px;
 }
 
@@ -19,7 +19,7 @@
   gap: 4vh;
   justify-content: center;
   text-align: center;
-  margin-bottom: 15vh;
+  padding-bottom: 5rem;
 }
 
 .albumCard {
