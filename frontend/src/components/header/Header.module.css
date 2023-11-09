@@ -11,19 +11,19 @@
 }
 
 .nav_header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  /* background-color: #100f0f; */
   background: radial-gradient(
     circle at 10% 20%,
     rgb(0, 0, 0) 0%,
     rgb(64, 64, 64) 90.2%
   );
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .titleH1 {
