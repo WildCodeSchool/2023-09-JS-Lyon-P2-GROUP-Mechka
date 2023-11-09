@@ -3,7 +3,12 @@
 }
 
 .navBar {
-  background-color: #100f0f;
+  /* background-color: #100f0f; */
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 0, 0) 0%,
+    rgb(64, 64, 64) 90.2%
+  );
   color: white;
   font-weight: bold;
   display: flex;
@@ -17,7 +22,7 @@
 .search,
 .favoris,
 .switch {
-  margin: 1vh;
+  padding: 1vh;
   justify-content: center;
   text-align: center;
 }
@@ -37,7 +42,7 @@ a {
   a {
     text-decoration: none;
     color: white;
-    margin: 1vh;
+    padding: 1vh;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -45,7 +50,7 @@ a {
   }
 
   .switch {
-    margin: 1vh;
+    padding: 1vh;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -53,6 +58,6 @@ a {
   }
 
   .titreSection {
-    margin-bottom: 0.25rem;
+    padding-bottom: 0.25rem;
   }
 }
