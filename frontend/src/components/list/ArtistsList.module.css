@@ -22,19 +22,9 @@
   margin-bottom: 15vh;
 }
 
-.albumCard {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
 .searchBar {
   height: 5vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
-  margin-top: 3vh;
-
-  margin-top: 12vh;
 }
