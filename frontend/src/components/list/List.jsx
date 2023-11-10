@@ -8,7 +8,7 @@ import ArtistsList from "./ArtistsList";
 
 export default function Search() {
   const token = useAuth();
-  const [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState(null);
   const [albums, setAlbums] = useState([]);
 
   async function search() {
@@ -79,7 +79,7 @@ export default function Search() {
             </div>
           );
         })}
-        {searchInput || <ArtistsList />}
+        {searchInput !== null || <ArtistsList />}
       </div>
     </>
   );
