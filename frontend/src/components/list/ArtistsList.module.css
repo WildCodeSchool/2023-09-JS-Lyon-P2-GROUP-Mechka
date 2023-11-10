@@ -1,0 +1,30 @@
+.coversP {
+  color: white;
+  font-size: 10px;
+  width: 15vh;
+  padding-top: 1vh;
+  font-size: 13px;
+}
+
+.albumCard img {
+  height: 18vh;
+  width: 18vh;
+  border-radius: 50%;
+}
+
+.albumCovers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4vh;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.searchBar {
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}

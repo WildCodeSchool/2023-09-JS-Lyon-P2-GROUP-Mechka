@@ -8,7 +8,7 @@ export default function CarrouselContainer() {
   const [newReleases, setNewReleases] = useState(null);
 
   useEffect(() => {
-    if (!token) return;
+    if (token === null) return;
 
     const urlRelease = "https://api.spotify.com/v1/browse/new-releases";
     const params = {
@@ -18,19 +18,33 @@ export default function CarrouselContainer() {
     };
 
     fetch(urlRelease, params)
-      .then((response) => response.json())
-      .then((data) => setNewReleases(data.albums.items));
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network Error");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setNewReleases(data.albums.items);
+      })
+      .catch((error) => {
+        console.error("Something bad happened!", error);
+      });
   }, [token]);
 
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>New releases</h2>
       <div className={styles.containerCarrousel}>
-        {!newReleases && <p className={styles.paraphLoading}>Loading...</p>}
-
-        {newReleases &&
+        {newReleases !== null &&
           newReleases.map((release) => (
-            <CarrouselCart key={release.id} img={release.images[0].url} />
+            <CarrouselCart
+              key={release.id}
+              img={release.images[0].url}
+              nameAlbum={release.name}
+              nameArtist={release.artists[0].name}
+              id={release.id}
+            />
           ))}
       </div>
     </div>
