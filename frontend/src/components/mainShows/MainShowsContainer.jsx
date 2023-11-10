@@ -10,7 +10,7 @@ export default function MainShowsContainer() {
   const [newShows, setNewShows] = useState(null);
 
   useEffect(() => {
-    if (!token) return;
+    if (token === null) return;
 
     const urlRelease =
       "https://api.spotify.com/v1/shows?ids=5CfCWKI5pZ28U0uOzXkDHe%2C5as3aKmN2k11yfDDDSrvaZ,4jaLLRDjv0OvVT3QBSuza2,4rOoJ6Egrf8K2IrywzwOMk,7xsOQzpeP5QggUY2CacpR5,0awfiXK6dqA8gi5XRZOlRK";
@@ -21,8 +21,18 @@ export default function MainShowsContainer() {
     };
 
     fetch(urlRelease, params)
-      .then((response) => response.json())
-      .then((data) => setNewShows(data.shows));
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network Error");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setNewShows(data.shows);
+      })
+      .catch((error) => {
+        console.error("Something bad happened!", error);
+      });
   }, [token]);
 
   return (
@@ -30,7 +40,7 @@ export default function MainShowsContainer() {
       <h2 className={styles.title}>Next Shows</h2>
       <div className={styles.containerSlider}>
         <div className={styles.cardPosition}>
-          {!newShows && <p>Loading...</p>}
+          {newShows === null && <p>Loading...</p>}
           <Carousel
             className={styles.carouselDesktop}
             width="20rem"
@@ -41,7 +51,7 @@ export default function MainShowsContainer() {
             showStatus={false}
             showArrows={false}
           >
-            {newShows &&
+            {newShows !== null &&
               newShows.map((shows) => (
                 <MainShowsCart key={shows.id} img={shows.images[0].url} />
               ))}
