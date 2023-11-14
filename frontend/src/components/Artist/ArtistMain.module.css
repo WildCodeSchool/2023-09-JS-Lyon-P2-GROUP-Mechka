@@ -6,9 +6,19 @@
   align-items: center;
 }
 
+.name {
+  color: white;
+  font-size: 4rem;
+}
+
 .containerImg {
-  width: 50vw;
-  height: 50vh;
+  width: 25rem;
+  height: 25rem;
+}
+
+.infos {
+  color: gray;
+  gap: 2rem;
 }
 
 @media screen and (width > 768px) {

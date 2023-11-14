@@ -1,16 +1,18 @@
 .container {
   display: flex;
-  flex-direction: column;
+  width: 20vw;
+  gap: 2rem;
 }
-
-.ArtistTitle {
-  color: white;
-  margin: 10rem;
+.containerSlide {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: hidden;
+  overflow: scroll;
 }
 
 .name {
   color: white;
-  font-size: 1.3rem;
+  font-size: 0.5rem;
 }
 
 .list {

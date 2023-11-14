@@ -8,7 +8,10 @@ export default function ArtistMain({ img, name }) {
         <img className={styles.containerImg} src={img} alt="Artist" />
       </div>
       <div>
-        <p>{name}</p>
+        <p className={styles.name}>{name}</p>
+        {/* <div className={styles.infos}>
+          <p>{genre}</p>
+        </div> */}
       </div>
     </div>
   );
@@ -17,4 +20,5 @@ export default function ArtistMain({ img, name }) {
 ArtistMain.propTypes = {
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  // genre: PropTypes.object.isRequired,
 };
