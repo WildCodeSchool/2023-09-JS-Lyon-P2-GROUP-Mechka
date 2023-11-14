@@ -8,40 +8,48 @@ import ArtistsList from "./ArtistsList";
 
 export default function Search() {
   const token = useAuth();
-  const [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState(null);
   const [albums, setAlbums] = useState([]);
 
   async function search() {
-    // Get request using search to get the Artist ID
-    const searchParameters = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    };
+    try {
+      // Get request using search to get the Artist ID
+      const searchParameters = {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      };
 
-    const artistID = await fetch(
-      `https://api.spotify.com/v1/search?q=${searchInput}&type=artist`,
-      searchParameters
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        return data.artists.items[0].id;
-      });
+      const artistID = await fetch(
+        `https://api.spotify.com/v1/search?q=${searchInput}&type=artist`,
+        searchParameters
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          return data.artists.items[0].id;
+        });
 
-    // Get resquest with Artist ID grab all the albums from the artist
-    await fetch(
-      `https://api.spotify.com/v1/artists/${artistID}/albums` +
-        `?include_groups=album&market=US&limit=50`,
-      searchParameters
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setAlbums(data.items);
-      });
+      if (artistID !== undefined) {
+        // Get resquest with Artist ID grab all the albums from the artist
+        await fetch(
+          `https://api.spotify.com/v1/artists/${artistID}/albums` +
+            `?include_groups=album&market=US&limit=50`,
+          searchParameters
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            setAlbums(data.items);
+          });
 
-    // Display those albums to the user
+        // Display those albums to the user
+      }
+      return null;
+    } catch (error) {
+      console.error(`Votre erreur est ${error}`);
+      return error;
+    }
   }
 
   return (
@@ -79,7 +87,7 @@ export default function Search() {
             </div>
           );
         })}
-        {searchInput || <ArtistsList />}
+        {searchInput !== null || <ArtistsList />}
       </div>
     </>
   );

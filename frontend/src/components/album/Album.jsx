@@ -13,7 +13,7 @@ export default function Album() {
   const [album, setAlbum] = useState(null);
 
   useEffect(() => {
-    if (!token) {
+    if (token === null) {
       return;
     }
 
@@ -25,20 +25,28 @@ export default function Album() {
     };
 
     fetch(urlAlbumById, params)
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network Error");
+        }
+        return response.json();
+      })
       .then((data) => {
         setAlbum(data);
+      })
+      .catch((error) => {
+        console.error("Something bad happened!", error);
       });
   }, [token]);
 
   return (
     <>
-      {!album && <p className={style.paraphLoading}>Loading...</p>}
+      {album === null && <p className={style.paraphLoading}>Loading...</p>}
 
       <NavBar />
       <Header />
       <div className={style.containerAlbum}>
-        {album && (
+        {album !== null && (
           <div className={style.container}>
             <AlbumMain
               img={album.images[0].url}

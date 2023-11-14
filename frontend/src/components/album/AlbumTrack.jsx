@@ -5,7 +5,7 @@ const replaceString = (str) => {
   return str.replace(".", ":");
 };
 
-export default function AlbumTrack({ nameTrack, duration, artist, index }) {
+export default function AlbumTrack({ nameTrack, duration, index }) {
   return (
     <div className={styles.container}>
       <li>
@@ -14,9 +14,9 @@ export default function AlbumTrack({ nameTrack, duration, artist, index }) {
         </p>
         <div className={styles.info}>
           <p className={styles.infos}>
-            {replaceString((duration / 60000).toFixed(2))}
+            {replaceString((duration / 60000).toFixed(2))}{" "}
+            {/* Je reçois les données en millisecondes et je les transforme en minutes en divisant par 6000 */}
           </p>
-          <p className={styles.infos}>{artist}</p>
         </div>
       </li>
     </div>
@@ -26,6 +26,5 @@ export default function AlbumTrack({ nameTrack, duration, artist, index }) {
 AlbumTrack.propTypes = {
   nameTrack: PropTypes.string.isRequired,
   duration: PropTypes.number.isRequired,
-  artist: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired,
 };
