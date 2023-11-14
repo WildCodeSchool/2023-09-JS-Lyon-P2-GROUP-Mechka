@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import styles from "./ArtistsList.module.css";
@@ -37,8 +38,10 @@ export default function ArtistsList() {
       {artists !== null &&
         artists.map((artist) => (
           <div key={artist.id} className={styles.albumCard}>
-            <img src={artist.images[0].url} alt="Artists" />
-            <p className={styles.p}>{artist.name}</p>
+            <Link to={`/artists/${artist.id}`}>
+              <img src={artist.images[0].url} alt="Artists" />
+              <p className={styles.p}>{artist.name}</p>
+            </Link>
           </div>
         ))}
     </div>
