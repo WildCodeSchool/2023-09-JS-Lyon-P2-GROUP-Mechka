@@ -1,9 +1,22 @@
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
+import { useTheme } from "../../contexts/ThemeContext";
 
-function NavBar() {
+export default function NavBar() {
+  const { isLight, setIsLight } = useTheme();
+
+  const onClickChange = () => {
+    setIsLight(!isLight);
+  };
+
   return (
-    <div className={styles.navBar}>
+    <div
+      className={
+        isLight
+          ? `${styles.navBar} ${styles.lightMode}`
+          : `${styles.navBar} ${styles.darkMode}`
+      }
+    >
       <div className={styles.home}>
         <Link to="/">
           <svg
@@ -46,6 +59,7 @@ function NavBar() {
 
       <div className={styles.switch}>
         <svg
+          onClick={onClickChange}
           className={styles.svgNavBar}
           xmlns="http://www.w3.org/2000/svg"
           height="1em"
@@ -58,5 +72,3 @@ function NavBar() {
     </div>
   );
 }
-
-export default NavBar;
