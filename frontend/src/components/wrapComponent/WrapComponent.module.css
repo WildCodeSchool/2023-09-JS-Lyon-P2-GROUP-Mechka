@@ -1,0 +1,29 @@
+.darkMode {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 0, 0) 0%,
+    rgb(64, 64, 64) 90.2%
+  );
+}
+
+.darkMode p {
+  color: white;
+}
+
+.darkMode h2 {
+  color: white;
+}
+
+.lightMode {
+  background: radial-gradient(
+    circle at 18.7% 37.8%,
+    rgb(250, 250, 250) 0%,
+    rgb(225, 234, 238) 90%
+  );
+}
+
+.lightMode p,
+.lightMode h1,
+.lightMode h2 {
+  color: black;
+}
