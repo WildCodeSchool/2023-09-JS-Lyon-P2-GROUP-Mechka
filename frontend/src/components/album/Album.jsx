@@ -53,6 +53,7 @@ export default function Album() {
               albumName={album.name}
               artist={album.artists[0].name}
               releaseDate={album.release_date}
+              id={album.id}
             />
 
             <h3 className={style.title}>Songs in Album</h3>

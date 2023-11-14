@@ -9,10 +9,27 @@
 .containerImg {
   width: 25rem;
   height: 25rem;
+  position: relative;
 }
 
 .containerImg > img {
   width: 100%;
+}
+
+.containerImg svg {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.heartRed {
+  fill: #ae0e6b;
+}
+
+.heartWhite {
+  fill: white;
 }
 
 .infoAlbum {
