@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
+import styles from "./ArtistMain.module.css";
 
-export default function ArtistMain({ img, artist }) {
+export default function ArtistMain({ img, name }) {
   return (
-    <div>
+    <div className={styles.container}>
       <div>
-        <img src={img} alt="Artist" />
+        <img className={styles.containerImg} src={img} alt="Artist" />
       </div>
       <div>
-        <p>{artist}</p>
+        <p>{name}</p>
       </div>
     </div>
   );
@@ -15,5 +16,5 @@ export default function ArtistMain({ img, artist }) {
 
 ArtistMain.propTypes = {
   img: PropTypes.string.isRequired,
-  artist: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };

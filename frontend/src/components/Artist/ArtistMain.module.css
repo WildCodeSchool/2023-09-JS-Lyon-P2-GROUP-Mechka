@@ -7,36 +7,8 @@
 }
 
 .containerImg {
-  width: 25rem;
-  height: 25rem;
-}
-
-.containerImg > img {
-  width: 100%;
-}
-
-.infoAlbum {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.albumName {
-  font-size: 2rem;
-  color: white;
-  text-align: center;
-}
-
-.artistName {
-  font-size: 1.5rem;
-  color: white;
-}
-
-.date {
-  font-size: 1.5rem;
-  color: #777772;
+  width: 50vw;
+  height: 50vh;
 }
 
 @media screen and (width > 768px) {
