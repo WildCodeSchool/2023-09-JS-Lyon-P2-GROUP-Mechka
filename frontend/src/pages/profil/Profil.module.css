@@ -1,5 +1,116 @@
-.titleH1 {
-  color: white;
+.outline {
+  width: 100%;
+  height: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.formProfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Light Mode */
+
+.lightMode {
+  background: radial-gradient(
+    circle at 18.7% 37.8%,
+    rgb(250, 250, 250) 0%,
+    rgb(225, 234, 238) 90%
+  );
+  height: 100vh;
+}
+
+.lightMode .formProfil p {
+  color: black;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.lightMode label {
+  color: black;
+}
+
+.lightMode input {
+  width: 20rem;
+  margin: 0;
+  padding: 0;
+  padding-left: 1rem;
+}
+
+.lightMode button {
+  height: 2.5rem;
+  width: 7rem;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.lightMode .container {
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(236, 236, 236, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(35, 35, 37, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Dark Mode */
+
+.darkMode {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 0, 0) 0%,
+    rgb(64, 64, 64) 90.2%
+  );
+  height: 100vh;
+}
+
+.darkMode .formProfil p {
+  color: black;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.darkMode label {
+  color: white;
+}
+
+.darkMode input {
+  width: 20rem;
+  margin: 0;
+  padding: 0;
+  background: rgb(222, 222, 222);
+}
+
+.darkMode button {
+  height: 2.5rem;
+  width: 7rem;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.darkMode .container {
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(201, 201, 202, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }

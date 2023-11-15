@@ -1,0 +1,58 @@
+.container {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.infoArtist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.name {
+  color: red;
+  font-size: 2.5rem;
+  padding: 0.5rem;
+}
+
+.titles {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.containerImg {
+  width: 25rem;
+  height: 25rem;
+}
+
+.infos p {
+  color: gray;
+  gap: 2rem;
+}
+
+@media screen and (width > 768px) {
+  .container {
+    width: 90%;
+    flex-direction: row;
+  }
+
+  .containerImg {
+    width: 16rem;
+    height: 16rem;
+  }
+}
+
+@media screen and (width > 1024px) {
+  .container {
+    width: 100%;
+  }
+
+  .containerImg {
+    width: 20rem;
+    height: 20rem;
+  }
+}

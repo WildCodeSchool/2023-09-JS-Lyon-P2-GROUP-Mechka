@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import CarrouselCart from "./CarrouselCart";
 import styles from "./CarrouselContainer.module.css";
+import ButtonRandom from "../buttonRandom/ButtonRandom";
 
 export default function CarrouselContainer() {
   const token = useAuth();
-  const [newReleases, setNewReleases] = useState(null);
+  const [newReleases, setNewReleases] = useState([]);
+
+  const [randomAlbums, setRandomAlbums] = useState(null);
 
   useEffect(() => {
     if (token === null) return;
@@ -26,6 +29,10 @@ export default function CarrouselContainer() {
       })
       .then((data) => {
         setNewReleases(data.albums.items);
+        const results = data.albums.items;
+        const randomIndex = Math.floor(Math.random() * results.length);
+        const selectedRandomAlbums = results[randomIndex].id;
+        setRandomAlbums(selectedRandomAlbums);
       })
       .catch((error) => {
         console.error("Something bad happened!", error);
@@ -47,6 +54,11 @@ export default function CarrouselContainer() {
             />
           ))}
       </div>
+      {randomAlbums !== null && (
+        <div className={styles.buttonPosition}>
+          <ButtonRandom id={randomAlbums} />
+        </div>
+      )}
     </div>
   );
 }
