@@ -8,7 +8,7 @@ const replaceString = (str) => {
 export default function AlbumTrack({ nameTrack, duration, index }) {
   return (
     <div className={styles.container}>
-      <li>
+      <li className={styles.songsList}>
         <p className={styles.name}>
           {index}. {nameTrack}
         </p>
