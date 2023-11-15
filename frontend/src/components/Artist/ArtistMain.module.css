@@ -7,9 +7,14 @@
 }
 
 .name {
-  color: white;
+  color: red;
   font-size: 2.5rem;
-  padding: 1rem;
+  padding: 0.5rem;
+}
+
+.titles {
+  color: white;
+  font-size: 1.5rem;
 }
 
 .containerImg {
@@ -17,9 +22,13 @@
   height: 25rem;
 }
 
-.infos {
+.infos p {
   color: gray;
   gap: 2rem;
+  padding: 0.2rem;
+}
+.infos {
+  padding: 1rem;
 }
 
 @media screen and (width > 768px) {

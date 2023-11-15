@@ -8,6 +8,8 @@
   gap: 1.5rem;
   overflow-x: hidden;
   overflow: scroll;
+  padding-bottom: 5rem;
+  padding-top: 1rem;
 }
 
 .name {

@@ -1,17 +1,23 @@
 import PropTypes from "prop-types";
 import styles from "./ArtistMain.module.css";
 
-export default function ArtistMain({ img, name }) {
+export default function ArtistMain({ img, name, genre }) {
   return (
     <div className={styles.container}>
       <div>
         <img className={styles.containerImg} src={img} alt="Artist" />
       </div>
       <div>
+        <h2 className={styles.titles}>Artist name</h2>
         <p className={styles.name}>{name}</p>
-        {/* <div className={styles.infos}>
-          <p>{genre}</p>
-        </div> */}
+        <div>
+          <h2 className={styles.titles}>Genre</h2>
+          <div className={styles.infos}>
+            {genre.map((e) => (
+              <p key={e}>{e}</p>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -20,5 +26,5 @@ export default function ArtistMain({ img, name }) {
 ArtistMain.propTypes = {
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  // genre: PropTypes.object.isRequired,
+  genre: PropTypes.arrayOf(PropTypes.shape).isRequired,
 };
