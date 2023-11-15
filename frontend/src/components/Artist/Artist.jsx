@@ -47,9 +47,8 @@ export default function Artist() {
               key={artist.id}
               img={artist.images[0].url}
               name={artist.name}
-            >
-              <p>{artist.popularity}</p>
-            </ArtistMain>
+            />
+            <p>{artist.popularity}</p>
           </div>
         )}
       </div>
