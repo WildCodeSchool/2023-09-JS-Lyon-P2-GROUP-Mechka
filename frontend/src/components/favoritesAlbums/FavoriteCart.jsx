@@ -1,15 +1,18 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import styles from "./FavoriteCart.module.css";
 
 export default function FavoriteCart({ img, title, artistName, alt, id }) {
   return (
-    <Link to={`/albums/${id}`}>
-      <div>
-        <img src={img} alt={alt} />
-        <p>{title}</p>
-        <p>{artistName}</p>
+    <div className={styles.containerFav}>
+      <div className={styles.positionFav}>
+        <Link to={`/albums/${id}`}>
+          <img src={img} alt={alt} />
+          <p>{title}</p>
+          <p>{artistName}</p>
+        </Link>
       </div>
-    </Link>
+    </div>
   );
 }
 

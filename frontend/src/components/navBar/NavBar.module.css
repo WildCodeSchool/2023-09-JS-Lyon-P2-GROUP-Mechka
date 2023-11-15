@@ -57,12 +57,12 @@
   width: 2rem;
 }
 
-a {
+.svgLink {
   text-decoration: none;
 }
 
 @media screen and (width > 1024px) {
-  a {
+  .svgLink {
     text-decoration: none;
     color: white;
     padding: 1vh;
