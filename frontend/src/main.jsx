@@ -6,7 +6,7 @@ import WrapComponent from "./components/wrapComponent/WrapComponent";
 
 import { AuthProvider } from "./contexts/AuthContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { FavouritesProvider } from "./contexts/FavouritesContext";
+import { FavoritesProvider } from "./contexts/FavoritesContext";
 
 import Home from "./pages/home/Home";
 import Favorite from "./pages/favorite/Favorite";
@@ -48,11 +48,11 @@ root.render(
   <React.StrictMode>
     <AuthProvider>
       <ThemeProvider>
-        <FavouritesProvider>
+        <FavoritesProvider>
           <WrapComponent>
             <RouterProvider router={router} />
           </WrapComponent>
-        </FavouritesProvider>
+        </FavoritesProvider>
       </ThemeProvider>
     </AuthProvider>
   </React.StrictMode>
