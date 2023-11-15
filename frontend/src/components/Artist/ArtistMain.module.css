@@ -32,10 +32,6 @@
 .infos p {
   color: gray;
   gap: 2rem;
-  /* padding: 0.2rem; */
-}
-.infos {
-  /* padding: 1rem; */
 }
 
 @media screen and (width > 768px) {

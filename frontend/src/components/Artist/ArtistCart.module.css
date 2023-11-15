@@ -1,11 +1,12 @@
 .container {
   display: flex;
   flex-direction: column;
+  width: 12rem;
 }
 
 .containerImg {
-  width: 15rem;
-  height: 15rem;
+  width: 12rem;
+  height: 12rem;
   flex: 0 0 auto;
   border-radius: 1.5rem;
 }
@@ -17,7 +18,7 @@
 .infoTitle {
   display: flex;
   color: white;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-decoration: none;
   max-width: 100%;
   flex-wrap: wrap;
@@ -26,14 +27,13 @@
 
 @media screen and (width > 1024px) {
   .containerImg {
-    width: 15rem;
-    height: 15rem;
-    flex: 0 0 auto;
+    width: 12rem;
+    height: 12rem;
   }
 
   .infoTitle {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .infoArtist {
