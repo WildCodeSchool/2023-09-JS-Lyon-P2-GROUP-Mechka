@@ -1,12 +1,11 @@
-.artistsNames {
+/* .artistsNames {
   color: white;
-}
+} */
 
 .albumCovers p {
-  color: white;
   font-size: 10px;
   width: 15vh;
-  margin-top: 1vh;
+  margin-top: vh;
   font-size: 13px;
 }
 
@@ -16,21 +15,21 @@ button {
   border: transparent;
   border-radius: 5px;
   width: 15vw;
+  height: 5vh;
   margin-right: 2vh;
 }
 
-.titleH1 {
+/* .titleH1 {
   color: white;
-}
+} */
 
 .searchBar {
   height: 5vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
-  margin-top: 8rem;
-  margin-bottom: 4vh;
-  margin-top: 14vh;
+  padding-top: 8rem;
+  margin-bottom: 5rem;
 }
 
 input {
@@ -61,8 +60,10 @@ input {
   gap: 4vh;
   justify-content: center;
   text-align: center;
-  margin-bottom: 15vh;
+  padding-bottom: 20vh;
   color: transparent;
+  height: 100%;
+  width: 100%;
 }
 
 .albumCard {

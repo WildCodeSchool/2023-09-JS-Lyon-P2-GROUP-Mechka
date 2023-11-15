@@ -6,11 +6,9 @@
   );
 }
 
-.darkMode p {
-  color: white;
-}
-
-.darkMode h2 {
+.darkMode p,
+.darkMode h2,
+.darkMode h3 {
   color: white;
 }
 
@@ -26,4 +24,8 @@
 .lightMode h1,
 .lightMode h2 {
   color: black;
+}
+
+a {
+  text-decoration: none;
 }
