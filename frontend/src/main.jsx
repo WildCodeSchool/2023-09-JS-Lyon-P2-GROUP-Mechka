@@ -2,10 +2,11 @@ import "./App.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { ThemeProvider } from "./contexts/ThemeContext";
 import WrapComponent from "./components/wrapComponent/WrapComponent";
 
 import { AuthProvider } from "./contexts/AuthContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import { FavoritesProvider } from "./contexts/FavoritesContext";
 
 import Home from "./pages/home/Home";
 import Favorite from "./pages/favorite/Favorite";
@@ -52,9 +53,11 @@ root.render(
   <React.StrictMode>
     <AuthProvider>
       <ThemeProvider>
-        <WrapComponent>
-          <RouterProvider router={router} />
-        </WrapComponent>
+        <FavoritesProvider>
+          <WrapComponent>
+            <RouterProvider router={router} />
+          </WrapComponent>
+        </FavoritesProvider>
       </ThemeProvider>
     </AuthProvider>
   </React.StrictMode>
