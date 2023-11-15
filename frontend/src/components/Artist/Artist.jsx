@@ -4,8 +4,8 @@ import { useAuth } from "../../contexts/AuthContext";
 import NavBar from "../navBar/NavBar";
 import Header from "../header/Header";
 import ArtistMain from "./ArtistMain";
-import CarrouselCart from "../carrouselMain/CarrouselCart";
 import styles from "./Artist.module.css";
+import ArtistCart from "./ArtistCart";
 
 export default function Artist() {
   const token = useAuth();
@@ -76,27 +76,24 @@ export default function Artist() {
       <NavBar />
       <Header />
 
-      <div>
+      <div className={styles.containerMain}>
         {artist !== null && (
-          <div>
-            <ArtistMain
-              key={artist.id}
-              img={artist.images[0].url}
-              name={artist.name}
-              genre={artist.genres}
-            />
-          </div>
+          <ArtistMain
+            key={artist.id}
+            img={artist.images[0].url}
+            name={artist.name}
+            genre={artist.genres}
+          />
         )}
         <div className={styles.containerSlide}>
           {album !== null && (
             <div className={styles.container}>
               {album.map((albumItem) => (
                 <div key={albumItem.id}>
-                  <CarrouselCart
+                  <ArtistCart
                     key={albumItem.id}
                     img={albumItem.images[0].url}
                     nameAlbum={albumItem.name}
-                    nameArtist={albumItem.artists[0].name}
                     id={albumItem.id}
                   />
                 </div>

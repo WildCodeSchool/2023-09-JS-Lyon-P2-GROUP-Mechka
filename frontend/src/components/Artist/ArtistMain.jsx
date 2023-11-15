@@ -7,16 +7,14 @@ export default function ArtistMain({ img, name, genre }) {
       <div>
         <img className={styles.containerImg} src={img} alt="Artist" />
       </div>
-      <div>
+      <div className={styles.infoArtist}>
         <h2 className={styles.titles}>Artist name</h2>
         <p className={styles.name}>{name}</p>
-        <div>
-          <h2 className={styles.titles}>Genre</h2>
-          <div className={styles.infos}>
-            {genre.map((e) => (
-              <p key={e}>{e}</p>
-            ))}
-          </div>
+        <h2 className={styles.titles}>Genre</h2>
+        <div className={styles.infos}>
+          {genre.map((e) => (
+            <p key={e}>{e}</p>
+          ))}
         </div>
       </div>
     </div>

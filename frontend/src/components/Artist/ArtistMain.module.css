@@ -6,6 +6,13 @@
   align-items: center;
 }
 
+.infoArtist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .name {
   color: red;
   font-size: 2.5rem;
@@ -25,10 +32,10 @@
 .infos p {
   color: gray;
   gap: 2rem;
-  padding: 0.2rem;
+  /* padding: 0.2rem; */
 }
 .infos {
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 @media screen and (width > 768px) {
@@ -45,7 +52,7 @@
 
 @media screen and (width > 1024px) {
   .container {
-    width: 80%;
+    width: 100%;
   }
 
   .containerImg {
