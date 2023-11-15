@@ -4,7 +4,7 @@
   height: 1rem;
 }
 
-li {
+.songsList {
   margin-bottom: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@ li {
 }
 
 @media screen and (width > 768px) {
-  li {
+  .songsList {
     align-items: center;
     flex-direction: row;
     gap: 1rem;

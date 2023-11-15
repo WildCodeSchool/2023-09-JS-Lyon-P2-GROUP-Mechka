@@ -12,6 +12,7 @@ import Favorite from "./pages/favorite/Favorite";
 import Profil from "./pages/profil/Profil";
 import AlbumPage from "./pages/album/AlbumPage";
 import ListPage from "./pages/list/ListPage";
+import Shows from "./components/Shows/Shows";
 import ArtistPage from "./pages/artist/ArtistPage";
 
 const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "albums/:id",
     element: <AlbumPage />,
+  },
+  {
+    path: "/shows/:id",
+    element: <Shows />,
   },
   {
     path: "Artists/:id",
