@@ -6,37 +6,32 @@
   align-items: center;
 }
 
+.infoArtist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.name {
+  color: red;
+  font-size: 2.5rem;
+  padding: 0.5rem;
+}
+
+.titles {
+  color: white;
+  font-size: 1.5rem;
+}
+
 .containerImg {
   width: 25rem;
   height: 25rem;
 }
 
-.containerImg > img {
-  width: 100%;
-}
-
-.infoAlbum {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.albumName {
-  font-size: 2rem;
-  color: white;
-  text-align: center;
-}
-
-.artistName {
-  font-size: 1.5rem;
-  color: white;
-}
-
-.date {
-  font-size: 1.5rem;
-  color: #777772;
+.infos p {
+  color: gray;
+  gap: 2rem;
 }
 
 @media screen and (width > 768px) {
@@ -53,7 +48,7 @@
 
 @media screen and (width > 1024px) {
   .container {
-    width: 80%;
+    width: 100%;
   }
 
   .containerImg {

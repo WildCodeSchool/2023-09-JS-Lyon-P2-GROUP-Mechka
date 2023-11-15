@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 12rem;
+}
+
+.containerImg {
+  width: 12rem;
+  height: 12rem;
+  flex: 0 0 auto;
+  border-radius: 1.5rem;
+}
+
+.image {
+  width: 100%;
+}
+
+.infoTitle {
+  display: flex;
+  color: white;
+  font-size: 0.8rem;
+  text-decoration: none;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (width > 1024px) {
+  .containerImg {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .infoTitle {
+    color: white;
+    font-size: 1rem;
+  }
+
+  .infoArtist {
+    color: white;
+    font-size: 1rem;
+  }
+}
