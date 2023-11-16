@@ -1,7 +1,3 @@
-/* .artistsNames {
-  color: white;
-} */
-
 .albumCovers p {
   font-size: 10px;
   width: 15vh;
@@ -18,10 +14,6 @@ button {
   height: 5vh;
   margin-right: 2vh;
 }
-
-/* .titleH1 {
-  color: white;
-} */
 
 .searchBar {
   height: 5vh;
@@ -62,8 +54,6 @@ input {
   text-align: center;
   padding-bottom: 20vh;
   color: transparent;
-  height: 100%;
-  width: 100%;
 }
 
 .albumCard {
