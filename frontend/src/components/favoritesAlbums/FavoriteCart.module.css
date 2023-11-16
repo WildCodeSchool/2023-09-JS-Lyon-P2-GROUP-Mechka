@@ -1,0 +1,30 @@
+.positionFav {
+  width: 10rem;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.positionFav img {
+  width: 10rem;
+}
+
+.containerFav {
+  display: flex;
+}
+
+@media screen and (width > 1024px) {
+  .positionFav {
+    width: 20rem;
+  }
+
+  .positionFav img {
+    width: 20rem;
+  }
+
+  .containerFav p {
+    font-size: 1.5rem;
+  }
+}

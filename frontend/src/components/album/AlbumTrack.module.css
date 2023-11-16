@@ -4,7 +4,7 @@
   height: 1rem;
 }
 
-li {
+.songsList {
   margin-bottom: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -24,12 +24,13 @@ li {
   font-size: 1.2rem;
 }
 
-.infos {
+.info p {
   font-size: 1rem;
+  color: rgba(163, 163, 163, 0.987);
 }
 
 @media screen and (width > 768px) {
-  li {
+  .songsList {
     align-items: center;
     flex-direction: row;
     gap: 1rem;
@@ -37,5 +38,13 @@ li {
 
   .info {
     margin-bottom: 0;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .info p {
+    font-size: 1.1rem;
   }
 }

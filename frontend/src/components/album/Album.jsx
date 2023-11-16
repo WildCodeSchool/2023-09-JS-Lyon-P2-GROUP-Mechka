@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
+import { useTheme } from "../../contexts/ThemeContext";
 import style from "./Album.module.css";
 import AlbumMain from "./AlbumMain";
 import AlbumTrack from "./AlbumTrack";
@@ -11,6 +12,7 @@ export default function Album() {
   const token = useAuth();
   const idAlbum = useParams();
   const [album, setAlbum] = useState(null);
+  const { isLight } = useTheme();
 
   useEffect(() => {
     if (token === null) {
@@ -47,15 +49,22 @@ export default function Album() {
       <Header />
       <div className={style.containerAlbum}>
         {album !== null && (
-          <div className={style.container}>
+          <div
+            className={
+              isLight
+                ? `${style.container} ${style.lightMode}`
+                : `${style.container} ${style.darkMode}`
+            }
+          >
             <AlbumMain
               img={album.images[0].url}
               albumName={album.name}
               artist={album.artists[0].name}
               releaseDate={album.release_date}
+              id={album.id}
             />
 
-            <h3 className={style.title}>Songs in Album</h3>
+            <h3>Songs in Album</h3>
 
             <ol className={style.list}>
               {album.tracks.items.map((track, index) => {

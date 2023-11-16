@@ -2,11 +2,19 @@ import { Link } from "react-router-dom";
 import React from "react";
 import styles from "./Header.module.css";
 import "../../App.css";
+import { useTheme } from "../../contexts/ThemeContext";
 
 function Header() {
+  const { isLight } = useTheme();
   return (
     <div>
-      <nav className={styles.nav_header}>
+      <nav
+        className={
+          isLight
+            ? `${styles.nav_header} ${styles.lightMode}`
+            : `${styles.nav_header} ${styles.darkMode}`
+        }
+      >
         <Link to="/">
           <img
             className={styles.logo}

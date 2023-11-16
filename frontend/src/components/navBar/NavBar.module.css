@@ -3,18 +3,44 @@
 }
 
 .navBar {
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(0, 0, 0) 0%,
-    rgb(64, 64, 64) 90.2%
-  );
-  color: white;
   font-weight: bold;
   display: flex;
   justify-content: space-around;
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+.lightMode {
+  background: radial-gradient(
+    circle at 18.7% 37.8%,
+    rgb(250, 250, 250) 0%,
+    rgb(225, 234, 238) 90%
+  );
+}
+
+.lightMode p {
+  color: black;
+}
+
+.lightMode svg {
+  fill: black;
+}
+
+.darkMode {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 0, 0) 0%,
+    rgb(64, 64, 64) 90.2%
+  );
+}
+
+.darkMode p {
+  color: white;
+}
+
+.darkMode svg {
+  fill: white;
 }
 
 .home,
@@ -29,16 +55,14 @@
 .svgNavBar {
   height: 2rem;
   width: 2rem;
-  fill: white;
 }
 
-a {
+.svgLink {
   text-decoration: none;
-  color: white;
 }
 
 @media screen and (width > 1024px) {
-  a {
+  .svgLink {
     text-decoration: none;
     color: white;
     padding: 1vh;

@@ -1,0 +1,102 @@
+.globalPositionFav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding-bottom: 10rem;
+  max-height: 85vh;
+  overflow-y: scroll;
+}
+
+.titleFav {
+  font-size: 2rem;
+  padding-left: 2rem;
+  padding-top: 6rem;
+  padding-bottom: 2.5rem;
+}
+
+/* Dark Mode */
+
+.darkMode {
+  background: radial-gradient
+    (circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+  height: 100vh;
+}
+
+.positionEmpty {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.empty {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.darkMode .svgBroke {
+  fill: white;
+  height: 5rem;
+  width: 5rem;
+}
+
+/* Light Mode */
+
+.lightMode {
+  background: radial-gradient(
+    circle at 18.7% 37.8%,
+    rgb(250, 250, 250) 0%,
+    rgb(225, 234, 238) 90%
+  );
+  height: 100vh;
+}
+
+.lightMode .empty {
+  color: black;
+}
+
+.lightMode .svgBroke {
+  fill: black;
+  height: 5rem;
+}
+@media screen and (width>1024px) {
+  .globalPositionFav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  .positionEmpty {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+  }
+
+  .titleFav {
+    font-size: 2.5rem;
+    padding-left: 2rem;
+    padding-top: 6rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .empty {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

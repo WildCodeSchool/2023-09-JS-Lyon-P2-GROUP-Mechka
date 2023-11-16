@@ -68,8 +68,8 @@ export default function Search() {
           type="input"
           onChange={(event) => setSearchInput(event.target.value)}
         />
-        <button className={styles.button} type="button" onClick={search}>
-          Search
+        <button className={styles.buttonSearch} type="button" onClick={search}>
+          <p>Search</p>
         </button>
       </div>
       <div className={styles.albumCovers}>
@@ -80,7 +80,7 @@ export default function Search() {
                 <img
                   className={styles.imageList}
                   src={album.images[0].url}
-                  alt="Cover album"
+                  alt={album.name}
                 />
               </Link>
               <p className={styles.p}>{album.name}</p>

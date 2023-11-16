@@ -1,0 +1,148 @@
+.containerShows {
+  padding-top: 10rem;
+  display: flex;
+  justify-content: center;
+}
+.imageContainerShows {
+  width: 15rem;
+  border-radius: 2rem;
+  border: #ccc 1px solid;
+}
+
+.showsPosition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.descriptionShows {
+  text-align: justify;
+  color: #ccc;
+  margin: 0;
+  font-size: 1.25rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 80vw;
+}
+
+.episode {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* --------------APPARENCE CARD EPISODES--------------- */
+
+.imageTitreShows {
+  width: 10rem;
+  border-radius: 0.5rem;
+}
+
+.carouselEpisode {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  list-style: none;
+}
+
+.darkMode .episodesApparence {
+  background-color: #cccccc04;
+  padding: 1rem;
+  border-radius: 1rem;
+  gap: 1rem;
+  box-shadow: -0.05rem -0.01rem 0.5rem 0.1rem #ffffff3a;
+  color: #ccc;
+}
+
+.lightMode .episodesApparence {
+  background-color: #cccccc04;
+  padding: 1rem;
+  border-radius: 1rem;
+  gap: 1rem;
+  box-shadow: -0.05rem -0.01rem 0.5rem 0.1rem #0000003a;
+  color: #ccc;
+}
+
+.positionEpisodes {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  padding-bottom: 5rem;
+}
+
+@media screen and (min-width: 770px) {
+  .showsTitle {
+    font-size: 3.5rem;
+  }
+
+  .containerShows {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .imageContainerShows {
+    width: 15rem;
+    border-radius: 2rem;
+    border: #ccc 1px solid;
+  }
+
+  .showsPosition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 7rem;
+  }
+
+  .descriptionShows {
+    font-size: 1.5rem;
+    text-align: center;
+    word-spacing: 0.1rem;
+    line-height: 1.7rem;
+  }
+
+  .imageTitreShows {
+    width: 10rem;
+    border-radius: 0.5rem;
+  }
+
+  .carouselEpisode {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    list-style: none;
+  }
+  .episodesApparence {
+    background-color: #cccccc04;
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 1rem;
+    box-shadow: -0.05rem -0.01rem 0.5rem 0.1rem #ffffff3a;
+    color: #ccc;
+    font-size: 1.3rem;
+  }
+
+  .positionEpisodes {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    padding-bottom: 5rem;
+  }
+
+  .episode {
+    font-size: 2rem;
+  }
+}
