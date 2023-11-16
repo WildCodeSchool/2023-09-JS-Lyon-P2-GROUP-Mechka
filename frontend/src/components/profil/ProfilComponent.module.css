@@ -43,6 +43,7 @@ button {
   margin: 0;
   padding: 0;
   padding-left: 1rem;
+  font-size: 1.2rem;
 }
 
 .lightMode button {
@@ -92,6 +93,9 @@ button {
   margin: 0;
   padding: 0;
   background: rgb(222, 222, 222);
+  color: black;
+  padding-left: 1rem;
+  font-size: 1.2rem;
 }
 
 .darkMode button {

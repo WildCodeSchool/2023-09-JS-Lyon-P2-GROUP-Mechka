@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
+import { useTheme } from "../../contexts/ThemeContext";
 import NavBar from "../navBar/NavBar";
 import Header from "../header/Header";
 import styles from "./Shows.module.css";
@@ -9,6 +10,7 @@ function Shows() {
   const token = useAuth();
   const [newShows, setNewShows] = useState(null);
   const idShow = useParams();
+  const { isLight } = useTheme();
 
   useEffect(() => {
     if (token === null) return;
@@ -36,7 +38,7 @@ function Shows() {
   }, [token]);
 
   return (
-    <div>
+    <div className={isLight ? `${styles.lightMode}` : `${styles.darkMode}`}>
       <div className={styles.containerShows}>
         {newShows !== null && (
           <div className={styles.showsPosition}>
@@ -47,12 +49,12 @@ function Shows() {
                 alt="Cover show"
               />
             )}
-            <h2>{newShows.name}</h2>
+            <h2 className={styles.showsTitle}>{newShows.name}</h2>
             <p className={styles.descriptionShows}>{newShows.description}</p>
 
             {newShows.episodes && newShows.episodes.items && (
               <div className={styles.positionEpisodes}>
-                <h3>Episodes:</h3>
+                <h3 className={styles.episode}>Episodes :</h3>
                 <ul className={styles.carouselEpisode}>
                   {newShows.episodes.items.map((episode) => (
                     <li className={styles.episodesApparence} key={episode.id}>

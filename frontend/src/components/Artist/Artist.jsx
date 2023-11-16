@@ -11,7 +11,6 @@ export default function Artist() {
   const token = useAuth();
   const [artist, setArtist] = useState(null);
   const [album, setAlbum] = useState(null);
-  // const [track, setTrack] = useState(null);
   const idArtist = useParams();
 
   useEffect(() => {
@@ -53,22 +52,6 @@ export default function Artist() {
       .catch((error) => {
         console.error("Something bad happened!", error);
       });
-
-    // const urlTrack = `https://api.spotify.com/v1/artists/${idArtist.id}/top-tracks`;
-
-    // fetch(urlTrack, params)
-    //   .then((response) => {
-    //     if (!response.ok) {
-    //       throw new Error("Network Error");
-    //     }
-    //     return response.json();
-    //   })
-    //   .then((data) => {
-    //     setTrack(data);
-    //   })
-    //   .catch((error) => {
-    //     console.error("Something bad happened!", error);
-    //   });
   }, [token]);
 
   return (

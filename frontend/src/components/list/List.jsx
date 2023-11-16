@@ -80,7 +80,7 @@ export default function Search() {
                 <img
                   className={styles.imageList}
                   src={album.images[0].url}
-                  alt="Cover album"
+                  alt={album.name}
                 />
               </Link>
               <p className={styles.p}>{album.name}</p>

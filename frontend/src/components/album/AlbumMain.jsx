@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import style from "./AlbumMain.module.css";
 import { useFavorites } from "../../contexts/FavoritesContext";
 
@@ -7,14 +7,15 @@ export default function AlbumMain({ img, albumName, artist, releaseDate, id }) {
   const [isFavorite, setIsFavorite] = useState(false);
   const { favorites, setFavorites } = useFavorites();
 
-  const onClickHeart = () => {
-    return setIsFavorite(!isFavorite);
-  };
+  useEffect(() => {
+    const isAlbumInFavorites = favorites.some((album) => album.id === id);
+    setIsFavorite(isAlbumInFavorites);
+  }, [favorites]);
 
   const albumInfo = { img, albumName, artist, releaseDate, id };
 
   const onClickAddToFavourites = () => {
-    if (!favorites.includes(id)) {
+    if (favorites.find((album) => album.id === id) === undefined) {
       setFavorites((oldState) => [...oldState, albumInfo]);
     }
   };
@@ -25,7 +26,6 @@ export default function AlbumMain({ img, albumName, artist, releaseDate, id }) {
         <svg
           onClick={() => {
             onClickAddToFavourites();
-            onClickHeart();
           }}
           className={isFavorite ? `${style.heartRed}` : `${style.heartWhite}`}
           xmlns="http://www.w3.org/2000/svg"
