@@ -24,8 +24,9 @@
   font-size: 1.2rem;
 }
 
-.infos {
+.info p {
   font-size: 1rem;
+  color: rgba(163, 163, 163, 0.987);
 }
 
 @media screen and (width > 768px) {
@@ -37,5 +38,13 @@
 
   .info {
     margin-bottom: 0;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .info p {
+    font-size: 1.1rem;
   }
 }

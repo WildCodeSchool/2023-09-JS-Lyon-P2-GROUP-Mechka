@@ -5,6 +5,7 @@
   align-items: center;
   width: 100vw;
   gap: 2rem;
+  padding-bottom: 5rem;
 }
 .container {
   display: flex;

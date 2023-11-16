@@ -23,4 +23,8 @@
   .positionFav img {
     width: 20rem;
   }
+
+  .containerFav p {
+    font-size: 1.5rem;
+  }
 }

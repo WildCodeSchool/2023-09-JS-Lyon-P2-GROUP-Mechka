@@ -1,18 +1,20 @@
 .albumCovers p {
-  font-size: 10px;
   width: 15vh;
-  margin-top: vh;
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 
-button {
+.buttonSearch {
   color: white;
   background-color: rgb(105, 105, 105);
   border: transparent;
   border-radius: 5px;
-  width: 15vw;
+  width: 20vw;
   height: 5vh;
   margin-right: 2vh;
+}
+
+.buttonSearch p {
+  font-size: 1.2rem;
 }
 
 .searchBar {
@@ -27,12 +29,13 @@ button {
 input {
   color: white;
   height: 5vh;
-  width: 70%;
+  width: 65%;
   background-color: rgb(105, 105, 105);
   border: transparent;
   border-radius: 5px;
   padding-left: 2vh;
   margin-left: 2vh;
+  font-size: 1.2rem;
 }
 
 ::placeholder {
@@ -61,4 +64,14 @@ input {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (width > 1024px) {
+  .buttonSearch p {
+    font-size: 1.3rem;
+  }
+
+  input {
+    font-size: 1.5rem;
+  }
 }

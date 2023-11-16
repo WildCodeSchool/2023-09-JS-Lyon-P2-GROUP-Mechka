@@ -1,7 +1,9 @@
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 12rem;
+  height: 18rem;
 }
 
 .containerImg {
@@ -18,15 +20,26 @@
 .infoTitle {
   display: flex;
   color: white;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   text-decoration: none;
   max-width: 100%;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  text-align: center;
+}
+
+.infoArtist {
+  font-style: italic;
+  font-size: 1.2rem;
 }
 
 @media screen and (width > 1024px) {
+  .container {
+    height: 15rem;
+    width: 15rem;
+  }
+
   .containerImg {
     width: 12rem;
     height: 12rem;
@@ -34,7 +47,7 @@
 
   .infoTitle {
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .infoArtist {
