@@ -67,6 +67,7 @@ export default function Search() {
           placeholder="Search For Artist"
           type="input"
           onChange={(event) => setSearchInput(event.target.value)}
+          name="text"
         />
         <button className={styles.buttonSearch} type="button" onClick={search}>
           <p>Search</p>

@@ -14,7 +14,7 @@ function Profil() {
           <form className={styles.formProfil}>
             <label>
               <p>Email :</p>
-              <input type="text" name="name" />
+              <input type="text" name="text" />
             </label>
             <br />
             <label>
