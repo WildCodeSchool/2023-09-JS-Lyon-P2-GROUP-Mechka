@@ -17,6 +17,12 @@ export default function AlbumMain({ img, albumName, artist, releaseDate, id }) {
   const onClickAddToFavourites = () => {
     if (favorites.find((album) => album.id === id) === undefined) {
       setFavorites((oldState) => [...oldState, albumInfo]);
+    } else {
+      setFavorites((album) =>
+        album.filter((albumFav) => {
+          return albumFav.id !== id;
+        })
+      );
     }
   };
   return (
