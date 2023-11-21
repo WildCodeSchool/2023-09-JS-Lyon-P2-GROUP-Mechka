@@ -1,3 +1,11 @@
+## Connection and API use
+
+You have to create a ".env" file inside "/frontend".
+
+Please follow instructions you will find in ".env.sample" file.
+
+You can find client ID and client SECRET by following this url : https://developer.spotify.com/ --> do not forget to log in and go to "Dashboard" and then "Settings".
+
 ## Concept
 
 This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
