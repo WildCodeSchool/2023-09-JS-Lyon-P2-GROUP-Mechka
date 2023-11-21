@@ -1,0 +1,19 @@
+.lightMode {
+  background: radial-gradient(
+    circle at 18.7% 37.8%,
+    rgb(250, 250, 250) 0%,
+    rgb(225, 234, 238) 90%
+  );
+  height: 100%;
+  padding-bottom: 30rem;
+}
+
+.darkMode {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 0, 0) 0%,
+    rgb(64, 64, 64) 90.2%
+  );
+  height: 100%;
+  padding-bottom: 30rem;
+}

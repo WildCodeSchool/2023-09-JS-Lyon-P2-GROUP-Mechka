@@ -1,56 +1,98 @@
 #button-random {
-  color: #262422;
-  text-shadow:
-    -1px 0 white,
-    0 1px white,
-    1px 0 white,
-    0 -1px white;
-  background-image: linear-gradient(
-    to right,
-    #7e53be,
-    #b051b1,
-    #d455a0,
-    #eb628e,
-    #f9767e,
-    #fe8576,
-    #ff946f,
-    #ffa46c,
-    #ffaf69,
-    #ffba67,
-    #ffc566,
-    #ffd166
-  );
-  border: none;
   border-radius: 2rem;
-  width: 100%;
-  height: 3rem;
-  font-size: 1.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2rem;
+  height: 4rem;
+  font-size: 1.5rem;
   position: relative;
+  margin: 0;
+  width: 100%;
+  box-shadow: 12px 12px 2rem #ff6f91a2;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+#button-random::before {
+  content: "";
+  border-radius: 1000px;
+  width: 28rem;
+  height: 4rem;
+  box-shadow: 0 0 60px #ff6f91;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#button-random:hover,
+#button-random:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+#button-random:hover::before,
+#button-random:focus::before {
+  opacity: 1;
+}
+
+.lightMode {
+  background-image: radial-gradient(
+    circle at 18.7% 37.8%,
+    rgb(214, 214, 214) 0%,
+    rgb(197, 197, 197) 90%
+  );
+  color: black;
+}
+
+.darkMode {
+  background-image: radial-gradient(
+    circle at 18.7% 37.8%,
+    rgb(172, 172, 172) 0%,
+    rgb(150, 150, 150) 90%
+  );
+
+  color: white;
 }
 
 .buttonPosition {
   display: flex;
   justify-content: center;
-  padding-bottom: 5.5rem;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 8rem;
+}
+
+.buttonPosition a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 @media screen and (min-width: 380px) and (max-width: 767px) {
   #button-random {
-    width: 60%;
+    width: 80%;
+  }
+  #button-random::before {
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
   #button-random {
     width: 50%;
   }
+
+  #button-random::before {
+    width: 100%;
+  }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (width>1200px) {
   #button-random {
     width: 40%;
+    font-size: 2rem;
+  }
+  #button-random::before {
+    width: 100%;
+    height: 4rem;
   }
 }

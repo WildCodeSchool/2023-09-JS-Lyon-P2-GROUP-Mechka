@@ -1,13 +1,13 @@
-import NavBar from "../../components/navBar/NavBar";
+import ProfilComponent from "../../components/profil/ProfilComponent";
 import Header from "../../components/header/Header";
-import styles from "./Profil.module.css";
+import NavBar from "../../components/navBar/NavBar";
 
 function Profil() {
   return (
     <div>
-      <NavBar />
       <Header />
-      <h1 className={styles.titleH1}>Encore rien...</h1>
+      <ProfilComponent />
+      <NavBar />
     </div>
   );
 }

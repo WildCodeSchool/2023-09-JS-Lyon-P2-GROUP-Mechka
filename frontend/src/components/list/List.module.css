@@ -1,25 +1,20 @@
-.artistsNames {
-  color: white;
-}
-
 .albumCovers p {
-  color: white;
-  font-size: 10px;
   width: 15vh;
-  margin-top: 1vh;
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 
-button {
+.buttonSearch {
   color: white;
   background-color: rgb(105, 105, 105);
   border: transparent;
   border-radius: 5px;
-  width: 15vw;
+  width: 20vw;
+  height: 5vh;
   margin-right: 2vh;
 }
 
-.titleH1 {
+.buttonSearch p {
+  font-size: 1.2rem;
   color: white;
 }
 
@@ -28,20 +23,20 @@ button {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  margin-top: 8rem;
-  margin-bottom: 4vh;
-  margin-top: 14vh;
+  padding-top: 8rem;
+  margin-bottom: 5rem;
 }
 
 input {
   color: white;
   height: 5vh;
-  width: 70%;
+  width: 65%;
   background-color: rgb(105, 105, 105);
   border: transparent;
   border-radius: 5px;
   padding-left: 2vh;
   margin-left: 2vh;
+  font-size: 1.2rem;
 }
 
 ::placeholder {
@@ -61,7 +56,7 @@ input {
   gap: 4vh;
   justify-content: center;
   text-align: center;
-  margin-bottom: 15vh;
+  padding-bottom: 20vh;
   color: transparent;
 }
 
@@ -70,4 +65,14 @@ input {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (width > 1024px) {
+  .buttonSearch p {
+    font-size: 1.3rem;
+  }
+
+  input {
+    font-size: 1.5rem;
+  }
 }

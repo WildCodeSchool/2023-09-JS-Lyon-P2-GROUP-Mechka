@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// eslint-disable-next-line import/no-unresolved
 import { Carousel } from "react-responsive-3d-carousel";
 import { useAuth } from "../../contexts/AuthContext";
 import MainShowsCart from "./MainShowsCart";
@@ -13,7 +12,7 @@ export default function MainShowsContainer() {
     if (token === null) return;
 
     const urlRelease =
-      "https://api.spotify.com/v1/shows?ids=5CfCWKI5pZ28U0uOzXkDHe%2C5as3aKmN2k11yfDDDSrvaZ,4jaLLRDjv0OvVT3QBSuza2,4rOoJ6Egrf8K2IrywzwOMk,7xsOQzpeP5QggUY2CacpR5,0awfiXK6dqA8gi5XRZOlRK";
+      "https://api.spotify.com/v1/shows?ids=5CfCWKI5pZ28U0uOzXkDHe%2C5as3aKmN2k11yfDDDSrvaZ,2ybKKK1jFijdeWal2qYNsT,4rOoJ6Egrf8K2IrywzwOMk,7xsOQzpeP5QggUY2CacpR5,0awfiXK6dqA8gi5XRZOlRK,6y1PloEyNsCNJH9vHias4T,1VXcH8QHkjRcTCEd88U3ti";
     const params = {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -53,7 +52,11 @@ export default function MainShowsContainer() {
           >
             {newShows !== null &&
               newShows.map((shows) => (
-                <MainShowsCart key={shows.id} img={shows.images[0].url} />
+                <MainShowsCart
+                  id={shows.id}
+                  key={shows.id}
+                  img={shows.images[0].url}
+                />
               ))}
           </Carousel>
         </div>
