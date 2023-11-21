@@ -6,7 +6,7 @@ import ButtonRandom from "../buttonRandom/ButtonRandom";
 
 export default function CarrouselContainer() {
   const token = useAuth();
-  const [newReleases, setNewReleases] = useState([]);
+  const [newReleases, setNewReleases] = useState(null);
 
   const [randomAlbums, setRandomAlbums] = useState(null);
 
